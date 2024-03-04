@@ -1,0 +1,9 @@
+/*
+Problem: Create a lambda function to compute the cube of a number.
+*/
+
+# Lambda, Anonymous function means there is no name of these function.
+# Lambda is an one time usabable function.
+
+cube = lambda x: x ** 3
+print(cube(3))
