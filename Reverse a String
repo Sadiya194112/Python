@@ -1,0 +1,11 @@
+/* 
+Problem: Reverse a string using a loop.
+*/
+
+str = input("Enter a String: ")
+reversed_str = ""
+
+for c in str:
+    reversed_str = c + reversed_str
+
+print(f"The Reversed String is: {reversed_str}")
