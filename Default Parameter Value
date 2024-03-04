@@ -1,0 +1,11 @@
+/*
+Problem: Write a function that greets a user. If no name is provided, 
+it should greet with a default name.
+*/
+
+def greet(name="User"):
+    return f"Hello, {name}!"
+
+
+print(greet("Sadiya")) #if we provide argument, funtion will print the argument.
+print(greet()) #if we don't provide argument, function will print default name.
