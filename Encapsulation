@@ -1,0 +1,23 @@
+/*
+Problem: Modify the Car class to encapsulate the brand attribute, 
+making it private, and provide a getter method for it.
+*/
+
+class Car:
+    def __init__(self, brand, model):
+        self.__brand = brand #This is private. Class er vitor access kora jabe kintu kono object ei brand variable ke use korte parbe na. Object jodi use chay tahole getter method er maddhome use korte hobe.
+        self.model = model
+
+    #Getter Method
+    def get_brand(self):    #Used to get/retrieve the value of a private variable.
+        return self.__brand + "!"
+
+class ElectricCar(Car):
+    def __init__(self, brand, model, battery_size):
+        super().__init__(brand, model)
+        self.battery_size = battery_size
+
+
+car2 = ElectricCar("Tesla", "Model S", "85kWh")
+# print(car2.__brand)   #This private variable isn't accessible directly.
+print(car2.get_brand())
