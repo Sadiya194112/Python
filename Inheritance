@@ -1,0 +1,23 @@
+/*
+Problem: Create an ElectricCar class that inherits from the Car class and has an additional
+attribute battery_size.
+*/
+
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+    
+    def full_name(self):
+        return f"{self.brand} {self.model}"
+    
+class ElectricCar(Car):
+    def __init__(self, brand, model, battery_size):
+        super().__init__(brand, model)  #uporer class __init__ method er access dao. 
+        self.battery_size = battery_size
+
+
+car1 = Car("Toyota", "Corolla")
+car2 = ElectricCar("Tesla", "Model S", "85kWh")
+print(car2.model)
+print(car2.full_name())
