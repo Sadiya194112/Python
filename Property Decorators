@@ -1,0 +1,22 @@
+/*
+Problem: Use a property decorator in the Car class to make the model attribute read-only.
+*/
+
+#Property Decorator = Object access(Read Only) korte parbe kintu value change korte parbe na.
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.__model = model
+
+    @property       # jodi amra method change korte na cai tokhon property decorator use kori.
+    def decorator(self):  #Jeheto obj access korbe tai wiring(self) korte hobe.
+        return self.__model
+
+class ElectricCar(Car):
+    def __init__(self, brand, model, battery_size):
+        super().__init__(brand, model)
+        self.battery_size = battery_size
+    
+car1 = Car("Tata", "Safari")
+# car1.model = "City"
+print(car1.decorator)
