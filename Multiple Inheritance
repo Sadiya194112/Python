@@ -1,0 +1,26 @@
+/* 
+Problem: Create two classes Battery and Engine, and let the ElectricCar class inherit
+from both, demonstrating multiple inheritance.
+*/
+
+class Car:
+    def __init__(self, brand, model):
+        self.__brand = brand
+        self.__model = model
+
+class Battery:
+    def battery_info(self):
+        return "This is battery."
+
+class Engine:
+    def engine_info(self):
+        return "This is engine."
+
+class ElectricCar(Car, Battery, Engine):
+    def __init__(self, brand, model, battery_size):
+        super().__init__(brand, model)
+        self.battery_size = battery_size
+
+tesla = ElectricCar("Tesla", "Model-S", "85kwh")
+print(tesla.battery_info())
+print(tesla.engine_info())
