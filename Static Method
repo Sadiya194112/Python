@@ -1,0 +1,26 @@
+/*
+Problem: Add a static method to the Car class that returns a general description of a car.
+*/
+
+# Static Method = Class er moddhe available kintu object er jonno na. Object e kotha bolte na dite caile static method use korbo.
+# Static method ke decorator o bolay hoy. Decorator/static method, method er functionality enhance kore. Decorator use kore kono kichu ke protect kora jay.
+
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    @staticmethod
+    def description():  #static method use korle wiring(self) lagbe na karon object e kotha bolte dibo na.
+        return "Cars are means of transport."
+
+class ElectricCar(Car):
+    def __init__(self, brand, model, battery_size):
+        super().__init__(brand, model)
+        self.battery_size = battery_size
+    
+car1 = Car("Tata", "Safari")
+car2 = Car("Tata", "Nexon")
+# print(car1.description()) #Jeheto object create korle self pass hoy tai description() method e self pass korte hobe ba wiring(self) kora lagbe.
+print(Car.description())
+
